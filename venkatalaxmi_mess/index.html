@@ -1,65 +1,734 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Venakatalaxmi Kalyana Manatapa | Kundapura</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon-32x32.png" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <style>
+    .purple-bg{
+      background-color: #4A1D3A !important;
+    }
+    .hero-section {
+        position: relative;
+        min-height: 90vh;
+        background: url('/assets/img/hero-bg/hero-bg-7.png') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        color: #eee;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .hero-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .hero-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .btn-custom {
+        padding: 12px 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease; 
+    }
+
+    .btn-custom.btn-light {
+        background: #D37543;
+        border: none;
+        color: #fff;
+    }
+
+    .btn-custom.btn-light:hover{
+      background: #4A1D3A;
+    }
+
+    .btn-custom.btn-outline-light {
+        border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .highlight-text {
+        color: #D37543;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: auto;
+            padding: 100px 0;
         }
 
-        body {
-            background-color: #4A1D3A;
-            color: #eee;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .hero-title {
+            font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .hero-content {
             text-align: center;
-            padding: 2rem;
+            padding: 40px 0;
         }
 
-        .container {
-            max-width: 800px;
+        .btn-group {
+            justify-content: center;
         }
+    }
 
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 2px;
-        }
+        .facility-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
 
-        p {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
+    .facility-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(74, 29, 58, 0.1);
+    }
 
-        .coming-soon {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            animation: pulse 2s infinite;
-        }
+    .facility-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #D37543;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
 
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
+    .facility-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: #4A1D3A;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .facility-card:hover .icon-wrapper {
+        background: #D37543;
+        transform: rotate(45deg);
+    }
+
+    .icon-wrapper img {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0) invert(1);
+    }
+
+    .facility-card h3 {
+        color: #4A1D3A;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .facility-card p {
+        color: #8F6C82;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .features p{
+        font-size: 15px;
+        color:#4A1D3A;
+    }
+    .menu-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            height: 100%;
+            padding: 20px;
         }
-    </style>
+        .menu-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #4A1D3A;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #4A1D3A;
+            font-weight: 600;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .price {
+            color: #4A1D3A;
+            font-weight: bold;
+        }
+        .special-note {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .cta {
+            background: #4A1D3A;
+            background-size: cover;
+            padding: 60px 0;
+        }
+        .cta .cta-btn:hover {
+            background: #FFF;
+            color:#4A1D3A;
+            border: 2px solid #4A1D3A;
+        }
+        @media screen and (max-width: 767px) {
+            .facility-card {
+                text-align: center;
+            }
+
+            .facility-card .icon-wrapper {
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            .facility-card h3 {
+                text-align: center;
+            }
+
+            .facility-card p {
+                text-align: center;
+            }
+        }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Something Exciting Is Coming</h1>
-        <p>We're working hard to bring you something amazing. Stay tuned for updates!</p>
-        <div class="coming-soon">Coming Soon</div>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="/assets/img/logo/e 04.png" alt="">
+        <!-- <h1 class="sitename">Venkatalaxmi Group</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#subscription">Subscription</a></li>
+          <li><a href="#menu">Daily Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
     </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6">
+              </div>
+              <div class="col-lg-6">
+                <div class="hero-content">
+                  <h1 class="hero-title" data-aos="fade-left" data-aos-delay="200">Homely, Hygienic & <span class="highlight-text">Affordable Meals!</span></h1>
+                  <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="200">Venkatalakshmi Mess offers unlimited, home-cooked breakfast and lunch at unbeatable prices. Enjoy hygienic, tasty, and wholesome meals every day!</p>
+                  <div class="d-flex gap-3 btn-group">
+                      <a href="#about" data-aos="fade-left" data-aos-delay="200"><button class="btn btn-custom btn-light">Get Started</button></a>
+                      <a href="#contact" data-aos="fade-left" data-aos-delay="200"><button class="btn btn-custom btn-outline-light">Contact Us</button></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="features section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
+            <img src="/assets/img/venkatalaxmi-mess/about-bg.png" alt="">
+          </div>
+
+          <div class="col-xl-7 col-lg-6 d-flex flex-column justify-content-center px-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="container section-title" data-aos="fade-up">
+              <span class="description-title">ABOUT US</span>
+              <h2>ABOUT US</h2>
+            </div>
+            <p class="justify">Venkatalaxmi Mess is our newest venture, born from the growing demand for smaller meal packages (serving 5 to 10 people). We’re here to serve fresh, homely, and hygienic food at affordable prices, perfect for locals, tourists, and working professionals. Our goal is simple—delicious, quality meals that feel just like home.</p>
+                      
+            <p class="justify">With a focus on taste, hygiene, and affordability, we prepare every meal with care, using fresh ingredients and traditional recipes. Whether you’re craving a wholesome lunch or a simple, satisfying dinner, Venkatalaxmi Mess is here to serve you with the warmth and authenticity of home-cooked food.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Stats Section -->
+    <section id="counts" class="counts" style="display: none;">
+      <div class="container">
+         <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+               <span class="count" data-target="6">0</span>
+               <p>Businesses</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+               <span class="count" data-target="27">0</span>
+               <p>Years of Experience</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+               <span class="count" data-target="100">0</span>
+               <p>Events Hosted every year</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+               <span class="count" data-target="500">0</span>
+               <p>Meals Served Daily</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+    <!-- Services Section -->
+    <section id="facilities" class="features-1 section light-bg">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <span class="description-title">FACILITIES</span>
+            <h2>FACILITIES</h2>
+          </div>
+
+          <div class="container">
+            <div class="row g-4">
+    
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="facility-card">
+                        <div class="icon-wrapper">
+                            <img src="/assets/img/icons/dosa.png" alt="Capacity">
+                        </div>
+                        <h3>Unlimited Breakfast Service</h3>
+                        <p>Enjoy a homely and nutritious breakfast every morning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="facility-card">
+                      <div class="icon-wrapper">
+                          <img src="/assets/img/icons/food-service.png" alt="Capacity">
+                      </div>
+                      <h3>Unlimited Holige Oota Lunch</h3>
+                      <p>Delight in a flavorful and satisfying lunch daily.</p>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="facility-card">
+                    <div class="icon-wrapper">
+                        <img src="/assets/img/icons/home (1).png" alt="Capacity">
+                    </div>
+                    <h3>Hygienic, Home-Cooked Meals </h3>
+                    <p>Freshly prepared meals ensuring hygiene and quality.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="facility-card">
+                  <div class="icon-wrapper">
+                      <img src="/assets/img/icons/rupees.png" alt="Capacity">
+                  </div>
+                  <h3>Affordable Meal Pricing </h3>
+                  <p>High-quality food at budget-friendly prices.</p>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="facility-card">
+                <div class="icon-wrapper">
+                    <img src="/assets/img/icons/subscription.png" alt="Capacity">
+                </div>
+                <h3>Monthly Subscription Plans</h3>
+                <p>Convenient meal plans for residents at an affordable rate.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="facility-card">
+              <div class="icon-wrapper">
+                  <img src="/assets/img/icons/family.png" alt="Capacity">
+              </div>
+              <h3>Ideal for Elderly & Small Families</h3>
+              <p>Reliable and economical meal options for daily needs.</p>
+          </div>
+      </div>
+            </div>
+        </div>
+  
+      </section><!-- /Services Section -->
+
+      <section id="subscription" class="cta">
+        <div class="container">
+    
+          <div class="text-center" data-aos="zoom-in">
+            <h3>Enjoy Unlimited, Homely Meals Every Day!</h3>
+            <p>Subscribe now for nutritious and affordable breakfast and lunch.</p>
+            <a class="cta-btn" href="https://api.whatsapp.com/send?phone=919008057055&text=Hi, Venkatalaxmi Mess. I want to Subscribe to your service." download target="_blank">Subscribe Now</a>
+          </div>
+    
+        </div>
+      </section>
+    
+      <section id="menu" class="features-1 section light-bg">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <span class="description-title">DAILY MENU</span>
+            <h2>DAILY MENU</h2>
+          </div>
+
+          <div class="container">
+            <div class="container-fluid">
+                
+                <div class="row g-4">
+                    <!-- Morning Section -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="menu-section">
+                            <h2 class="menu-title">Morning Breakfast</h2>
+                            <div class="menu-item">
+                                <span>Plate Tindi</span>
+                                <span class="price">₹45</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Full Tindi</span>
+                                <span class="price">₹80</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Afternoon Section -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="menu-section">
+                            <h2 class="menu-title">Afternoon Meals</h2>
+                            <div class="menu-item">
+                                <span>Plate Meal</span>
+                                <span class="price">₹80</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Full Meal</span>
+                                <span class="price">₹150</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Night Section -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="menu-section">
+                            <h2 class="menu-title">Night Meals</h2>
+                            <div class="menu-item">
+                                <span>Night Meal</span>
+                                <span class="price">₹80</span>
+                            </div>
+                            <p class="special-note mt-2">* Pre-order only</p>
+                        </div>
+                    </div>
+        
+                    <!-- Beverages Section -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                        <div class="menu-section">
+                            <h2 class="menu-title">Beverages & Refreshments</h2>
+                            <div class="menu-item">
+                                <span>Tea / Coffee</span>
+                                <span class="price">₹15</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Masala Majjige</span>
+                                <span class="price">₹25</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Yellu Neeru</span>
+                                <span class="price">₹25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          
+    </div>
+      </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section dark-theme">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Contact Us</span>
+        <h2>Contact Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248301.06915361044!2d74.58666983779342!3d13.49231562041382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc91f09e75b489%3A0x8568935bc25b302a!2sVenkatalaxmi%20Kalyana%20Mantapa!5e0!3m2!1sen!2sin!4v1736584460378!5m2!1sen!2sin" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row">
+          <div class="col-lg-6">
+              <div class="contact-info-card">
+                  <div class="contact-icon-wrapper">
+                      <i class="bi bi-geo-alt contact-icon"></i>
+                  </div>
+                  <div class="contact-details">
+                      <h4>HEAD OFFICE</h4>
+                      <p>Hanglur, Kundapura, Udupi - 576217</p>
+                  </div>
+              </div>
+
+              <div class="contact-info-card">
+                  <a href="mailto:contact@venkatalaxmi.com"><div class="contact-icon-wrapper">
+                      <i class="bi bi-envelope contact-icon"></i>
+                  </div></a>
+                  <div class="contact-details">
+                      <h4>EMAIL</h4>
+                      <p>contact@venkatalaxmi.com</p>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="contact-info-card">
+                          <a href="tel:+91-9632169727"><div class="contact-icon-wrapper">
+                              <i class="bi bi-telephone contact-icon"></i>
+                          </div></a>
+                          <div class="contact-details">
+                              <h4>H Chandrashekhar Aithal</h4>
+                              <p>+91-9632169727</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="contact-info-card">
+                          <a href="tel:+91-9686325654"><div class="contact-icon-wrapper">
+                              <i class="bi bi-telephone contact-icon"></i>
+                          </div></a>
+                          <div class="contact-details">
+                              <h4>Hemavathi Aithal</h4>
+                              <p>+91-9686325654</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="contact-info-card">
+                  <a href="tel:+91-9008057055"><div class="contact-icon-wrapper">
+                      <i class="bi bi-telephone contact-icon"></i>
+                  </div></a>
+                  <div class="contact-details">
+                      <h4>Anantha Padmanabha Aithal</h4>
+                      <p>+91-9008057055</p>
+                  </div>
+              </div>
+
+              
+
+              
+          </div>
+
+          <div class="col-lg-6">
+              <div class="contact-form">
+                  <form>
+                      <div class="row g-3">
+                          <div class="col-md-6">
+                              <input type="text" class="form-control" placeholder="Your Name" required>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="email" class="form-control" placeholder="Your Email" required>
+                          </div>
+                          <div class="col-12">
+                              <input type="text" class="form-control" placeholder="Subject" required>
+                          </div>
+                          <div class="col-12">
+                              <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                          </div>
+                          <div class="col-12 text-center">
+                              <button type="submit" class="btn btn-primary">Send Message</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+    <a target="_blank" href="tel:+919008057055" class="telephone-button"><i class="bi bi-telephone"></i></a>
+    <a target="_blank" href="https://api.whatsapp.com/send?phone=919008057055&text=Hi, Venkatalaxmi Group!" class="whatsapp-button"><i class="bi bi-whatsapp"></i></a>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename-footer">Venkatalaxmi Group</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Hanglur, Kundapura</p>
+            <p>Udupi - 576217</p>
+            <p class="mt-3"><strong>Phone:</strong> <a href="tel:+91-9008057055"><span>+91-9008057055</span></p></a>
+            <p><strong>Email:</strong> <a href="mailto:contact@venkatalaxmi.com"><span>contact@venkatalaxmi.com</span></p></a>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#menu">Daily Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Our Businesses</h4>
+          <ul>
+            <li><a href="/index.html">Venkatalaxmi Group</a></li>
+            <li><a href="/venkatalaxmi_comforts/">Venkatalaxmi Comforts</a></li>
+            <li><a href="/venkatalaxmi_builders/">Venkatalaxmi Builders</a></li>
+            <li><a href="/venkatalaxmi_kalyana_mantapa/">Venkatalaxmi Kalyana Mantapa</a></li>
+            <li><a href="/sri_krishna_sabhagruha/">Sri Krishna Sabhagruha</a></li>
+            <li><a href="/venkatalaxmi_mess/">Venkatalaxmi Mess</a></li>
+            <li><a href="/raaga_utsav/">Raaga Utsav</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Venkatalaxmi Comforts</h4>
+          <ul>
+            <li><a href="/venkatalaxmi_comforts/delux-room.html">Delux Room</a></li>
+            <li><a href="/venkatalaxmi_comforts/premium-room.html">Premium Room</a></li>
+            <li><a href="/venkatalaxmi_comforts/suits.html">Suits</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Venkatalaxmi Group</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed & Developed by <a href="https://sudheshholla.in" target="_blank">Sudhesh Holla</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="display: none;"></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
 </body>
+
 </html>
