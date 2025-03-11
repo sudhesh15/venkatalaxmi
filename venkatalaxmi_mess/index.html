@@ -28,7 +28,7 @@
   <link href="/assets/css/main.css" rel="stylesheet">
   <style>
     .purple-bg{
-      background-color: #4A1D3A !important;
+      background-color: #452516 !important;
     }
     .hero-section {
         position: relative;
@@ -56,7 +56,7 @@
     }
 
     .hero-title {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 800;
         margin-bottom: 1.5rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -64,7 +64,7 @@
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         opacity: 0.9;
         margin-bottom: 2rem;
         max-width: 600px;
@@ -85,7 +85,7 @@
     }
 
     .btn-custom {
-        padding: 12px 24px;
+        padding: 10px 20px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -93,17 +93,20 @@
     }
 
     .btn-custom.btn-light {
-        background: #D37543;
+        background: #DFD3CB;
         border: none;
-        color: #fff;
+        border-left: 5px solid #371e11;
+        color: #371e11;
     }
 
-    .btn-custom.btn-light:hover{
-      background: #4A1D3A;
+    .btn-custom.btn-light:hover {
+        background:#DFD3CB;
+        border-left: 2px solid #371e11;
+        color: #371e11;
     }
 
     .btn-custom.btn-outline-light {
-        border: 2px solid rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .highlight-text {
@@ -157,7 +160,7 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background: #D37543;
+        background: #452516;
         transform: scaleX(0);
         transition: transform 0.3s ease;
     }
@@ -169,7 +172,7 @@
     .icon-wrapper {
         width: 80px;
         height: 80px;
-        background: #4A1D3A;
+        background: #452516;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -179,8 +182,8 @@
     }
 
     .facility-card:hover .icon-wrapper {
-        background: #D37543;
-        transform: rotate(45deg);
+        background: #452516;
+        transform: rotate(360deg);
     }
 
     .icon-wrapper img {
@@ -190,7 +193,7 @@
     }
 
     .facility-card h3 {
-        color: #4A1D3A;
+        color: #452516;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 15px;
@@ -204,7 +207,7 @@
 
     .features p{
         font-size: 15px;
-        color:#4A1D3A;
+        color:#452516;
     }
     .menu-section {
             background-color: #fff;
@@ -215,11 +218,11 @@
         }
         .menu-title {
             color: #2c3e50;
-            border-bottom: 2px solid #4A1D3A;
+            border-bottom: 2px solid #452516;
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-size: 20px;
-            color: #4A1D3A;
+            color: #452516;
             font-weight: 600;
         }
         .menu-item {
@@ -233,7 +236,7 @@
             border-bottom: none;
         }
         .price {
-            color: #4A1D3A;
+            color: #452516;
             font-weight: bold;
         }
         .special-note {
@@ -242,14 +245,14 @@
             font-style: italic;
         }
         .cta {
-            background: #4A1D3A;
+            background: #452516;
             background-size: cover;
             padding: 60px 0;
         }
         .cta .cta-btn:hover {
             background: #FFF;
-            color:#4A1D3A;
-            border: 2px solid #4A1D3A;
+            color: #452516;
+            border: 2px solid #452516;
         }
         @media screen and (max-width: 767px) {
             .facility-card {
@@ -269,12 +272,15 @@
                 text-align: center;
             }
         }
+        .sitename{
+            color: #fff !important;
+            }
   </style>
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top header_section">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
@@ -309,7 +315,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="hero-content">
-                  <h1 class="hero-title" data-aos="fade-left" data-aos-delay="200">Homely, Hygienic & <span class="highlight-text">Affordable Meals!</span></h1>
+                  <h1 class="hero-title" data-aos="fade-left" data-aos-delay="200">Homely, Hygienic & Affordable Meals!</h1>
                   <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="200">Venkatalakshmi Mess offers unlimited, home-cooked breakfast and lunch at unbeatable prices. Enjoy hygienic, tasty, and wholesome meals every day!</p>
                   <div class="d-flex gap-3 btn-group">
                       <a href="#about" data-aos="fade-left" data-aos-delay="200"><button class="btn btn-custom btn-light">Get Started</button></a>
@@ -328,7 +334,7 @@
 
         <div class="row gy-4">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
-            <img src="/assets/img/venkatalaxmi-mess/about-us.jpg" alt="">
+            <img src="/assets/img/venkatalaxmi-mess/about-us.png" alt="">
           </div>
 
           <div class="col-xl-7 col-lg-6 d-flex flex-column justify-content-center px-lg-5" data-aos="fade-up" data-aos-delay="200">

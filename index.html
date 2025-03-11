@@ -43,7 +43,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+            background: linear-gradient(360deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
             z-index: 1;
         }
 
@@ -54,7 +54,7 @@
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -62,7 +62,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             opacity: 0.9;
             margin-bottom: 2rem;
             max-width: 600px;
@@ -83,7 +83,7 @@
         }
 
         .btn-custom {
-            padding: 12px 24px;
+            padding: 10px 20px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -91,19 +91,20 @@
         }
 
         .btn-custom.btn-light {
-            background: #D37543;
+            background: #DFD3CB;
             border: none;
-            color: #eee;
+            border-left: 5px solid #371e11;
+            color: #371e11;
         }
 
         .btn-custom.btn-light:hover {
-            background: #4A1D3A;
-            border: none;
-            color: #eee;
+          background:#DFD3CB;
+          border-left: 2px solid #371e11;
+          color: #371e11;
         }
 
         .btn-custom.btn-outline-light {
-            border: 2px solid rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.9);
         }
 
         .highlight-text {
@@ -137,97 +138,139 @@
         .stretched-link{
           color: #4A1D3A !important;
         }
-        .service-item {
-          background: white;
-          border-radius: 15px;
-          padding: 30px;
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-          height: 100%;
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(74, 29, 58, 0.1);
-        }
-
-        .service-item:hover::before {
-            transform: scaleX(1);
-        }
-
         .service-item .icon {
-            width: 80px;
-            height: 80px;
-            background: #4A1D3A;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 25px;
-            transition: all 0.3s ease;
+          width: 80px;
+          height: 80px;
+          background: #452516;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 25px;
+          transition: all 0.3s ease;
+          margin-bottom: 20px;
         }
 
         .service-item:hover .icon {
-            background: #D37543;
-            transform: rotate(45deg);
+          background: #452516;
         }
 
         .service-item .icon img {
-            width: 40px;
-            height: 40px;
-            filter: brightness(0) invert(1);
-            transition: transform 0.3s ease;
+          margin-top: 15px;
+          width: 40px;
+          height: 40px;
+          filter: brightness(0) invert(1);
+          transition: transform 0.3s ease;
         }
 
         .service-item:hover .icon img {
-            transform: rotate(-45deg);
+          transform: rotate(360deg);
         }
 
         .service-item .title {
-            margin-bottom: 15px;
+          margin-bottom: 15px;
         }
 
         .service-item .title a {
-            color: #4A1D3A;
-            text-decoration: none;
-            transition: color 0.3s ease;
+          color: #371e11;
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
 
-        .service-item .title a:hover {
-            color: #D37543;
+        .service-item h4{
+          color: #371e11;
+        }
+        .feature-box {
+          position: relative;
+          padding-bottom: 50px;
+          overflow: hidden;
+          text-align: center; /* Center all text */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
-        .service-item .description {
-            color: #666;
-            margin-bottom: 0;
-        }
+    .card-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #DFD3CB;
+        color: #452516;
+        padding: 12px;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
 
-        .service-item .read-more {
-            color: #4A1D3A;
-            font-weight: 500;
+    .card-label:hover {
+        background-color: #DFD3CB; /* Slightly darker shade for hover effect */
+        color: #452516;
+    }
+    .feature-box h4 {
+      text-align: center;
+    }
+
+    .feature-box p {
+      text-align: center;
+    }
+    .sitename-footer{
+      color: #fff !important;
+    }
+
+    .video-box {
+      min-height: 400px;
+    }
+
+    .video-box img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      padding: 0px 10px 0px 10px;
+    }
+
+    .business-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 25px;
         }
 </style>
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center sticky-top header_section">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo/main-logo.png" alt="">
-        <h1 class="logo-name">Venkatalaxmi Group</h1>
+       <img src="assets/img/logo/main-logo.png" alt="">
+        <h1 class="sitename">Venkatalaxmi</h1><span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#business">Business Portfolio</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li class="dropdown"><a href="business"><span>Business Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="venkatalaxmi_comforts/">Venkatalaxmi Comforts</a></li>
+              <li><a href="venkatalaxmi_builders/">Venkatalaxmi Builders</a></li>
+              <li><a href="venkatalaxmi_kalyana_mantapa/">Venkatalaxmi Kalyana Mantapa</a></li>
+              <li><a href="sri_krishna_sabhagruha/">Sri Krishna Sabhagruha</a></li>
+              <li><a href="venkatalaxmi_mess/">Venkatalaxmi Mess</a></li>
+              <li><a href="raaga_utsav/">Raaga Utsav</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -242,7 +285,7 @@
           <div class="row align-items-center">
               <div class="col-lg-6">
                   <div class="hero-content">
-                      <h1 class="hero-title" data-aos="fade-right" data-aos-delay="200">Welcome to <span class="highlight-text">Venkatalaxmi</span></h1>
+                      <h1 class="hero-title" data-aos="fade-right" data-aos-delay="200">Welcome to Venkatalaxmi</h1>
                       <p class="hero-subtitle" data-aos="fade-right" data-aos-delay="200">Experience Excellence in Hospitality, Homes, and Events with Venkatalaxmi Group.</p>
                       <div class="d-flex gap-3 btn-group">
                           <a href="#about" data-aos="fade-right" data-aos-delay="200"><button class="btn btn-custom btn-light">Get Started</button></a>
@@ -259,7 +302,7 @@
 
       <div class="container">
         <div class="row gy-4">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
+          <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
             <img src="assets/img/about-bg.png" alt="">
           </div>
           <div class="col-xl-7 col-lg-6 d-flex flex-column justify-content-center px-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -300,81 +343,74 @@
       </div>
     </section>
 
-    <section id="business" class="services section dark-theme">
+    <section id="business" class="features-1 section dark-theme">
+
+      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">OUR BUSINESSES</span>
-        <h2>OUR BUSINESSES</h2>
+          <span class="description-title">OUR BUSINESSES</span>
+          <h2>OUR BUSINESSES</h2>
       </div>
 
       <div class="container">
+
         <div class="row gy-4">
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/double-bed.png"></i>
-              <div>
-                <h4 class="title"><a href="/venkatalaxmi_comforts/" class="stretched-link">Venkatalaxmi Comforts</a></h4>
-                <p class="description">Experience homely ambiance and premium amenities at Venkatalaxmi Comforts, offering luxurious rooms, local cuisine, and exceptional service.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box orange position-relative">
+                <img src="/assets/img/businesses/1.png" alt="Venkataxmi Comforts Logo" class="gallery-img">
+                <h4>Venkatalaxmi Comforts</h4>
+                <p class="mb-5">Experience homely ambiance and premium amenities at Venkatalaxmi Comforts, offering luxurious rooms, local cuisine, and exceptional service.</p>
+                <a href="/venkatalaxmi_comforts/" class="card-label">Read More</a>
             </div>
           </div>
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/builder.png"></i>
-              <div>
-                <h4 class="title"><a href="/venkatalaxmi_builders/" class="stretched-link">Venkatalaxmi Builders</a></h4>
-                <p class="description">Venkatalaxmi Builders, led by H. Chandra Shekar Aithal and Hemavathi Aithal, offers sustainable, luxury homes with timely completion.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box orange">
+              <img src="/assets/img/businesses/2.png" alt="" class="img-fluid mb-4" class="gallery-img">
+              <h4>Venkatalaxmi Builders</h4>
+              <p class="mb-5">Venkatalaxmi Builders, led by H. Chandra Shekar Aithal and Hemavathi Aithal, offers sustainable, luxury homes with timely completion.</p>
+              <a href="/venkatalaxmi_builders/" class="card-label">Read More</a>
+            </div>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box orange">
+              <img src="/assets/img/businesses/3.png" alt="" class="img-fluid mb-4" class="gallery-img">
+              <h4>Venkatalaxmi Kalyana Mantapa</h4>
+              <p class="mb-5">Venkatalaxmi Kalyana Mantapa, with 27 years of service, offers a modern venue for weddings, events, and exceptional catering.</p>
+              <a href="/venkatalaxmi_kalyana_mantapa/" class="card-label">Read More</a>
+            </div>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box orange">
+              <img src="/assets/img/businesses/4.png" alt="" class="img-fluid mb-4" class="gallery-img">
+              <h4>Sri Krishna Sabhagruha</h4>
+              <p class="mb-5">Sri Krishna Sabhagriha, by Chandrashekhar Aithal, offers a luxurious, vibrant venue for large events with customizable catering and professional planning.</p>
+              <a href="/sri_krishna_sabhagruha/" class="card-label">Read More</a>
             </div>
           </div>
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/hall.png"></i>
-              <div>
-                <h4 class="title"><a href="/venkatalaxmi_kalyana_mantapa/" class="stretched-link">Venkatalaxmi Kalyana Mantapa</a></h4>
-                <p class="description">Venkatalaxmi Kalyana Mantapa, with 27 years of service, offers a modern venue for weddings, events, and exceptional catering.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box orange">
+              <img src="/assets/img/businesses/5.png" alt="" class="img-fluid mb-4" class="gallery-img">
+              <h4>Venkatalaxmi Mess</h4>
+              <p class="mb-5">Venkatalaxmi Mess offers fresh, hygienic, and affordable vegetarian meals with authentic flavors.</p>
+              <a href="/venkatalaxmi_mess/" class="card-label">Read More</a>
             </div>
           </div>
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/hall-1.png"></i>
-              <div>
-                <h4 class="title"><a href="/sri_krishna_sabhagruha/" class="stretched-link">Sri Krishna Sabhagriha</a></h4>
-                <p class="description">Sri Krishna Sabhagriha, by Chandrashekhar Aithal, offers a luxurious, vibrant venue for large events with customizable catering and professional planning.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
+          <div class="col-xl-4 col-md-6 service-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box orange">
+              <img src="/assets/img/businesses/6.png" alt="" class="img-fluid mb-4" class="gallery-img">
+              <h4>Raaga Utsav</h4>
+              <p class="mb-5">Turning wedding dreams into reality. Every moment, every detail carefully woven to create the most magical day of your life.</p>
+              <a href="/raaga_utsav/" class="card-label">Read More</a>
             </div>
           </div>
 
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/food-service.png"></i>
-              <div>
-                <h4 class="title"><a href="/venkatalaxmi_mess/" class="stretched-link">Venkatalaxmi Mess</a></h4>
-                <p class="description">Venkatalaxmi Mess offers fresh, hygienic, and affordable vegetarian meals with authentic flavors.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item d-flex position-relative h-100">
-              <i class="icon flex-shrink-0"><img src="/assets/img/icons/wedding-ring.png"></i>
-              <div>
-                <h4 class="title"><a href="/raaga_utsav/" class="stretched-link">Raaga Utsav</a></h4>
-                <p class="description">Turning wedding dreams into reality. Every moment, every detail carefully woven to create the most magical day of your life.</p>
-                <p class="read-more mt-4">Read More</p>
-              </div>
-            </div>
-          </div>
         </div>
+
       </div>
 
     </section>
@@ -523,7 +559,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename-footer">Venkatalaxmi Group</span>
+            <span class="sitename-footer" style="color:#fff;">Venkatalaxmi Group</span>
           </a>
           <div class="footer-contact pt-3">
             <p>Hanglur, Kundapura</p>
@@ -576,7 +612,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Venkatalaxmi Group</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename-footer">Venkatalaxmi Group</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         Designed & Developed by <a href="https://sudheshholla.in" target="_blank">Sudhesh Holla</a>
       </div>

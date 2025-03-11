@@ -30,11 +30,11 @@
     <style>
 
       .description-title-new{
-        color: #755168 !important;
+        color: #85553f !important;
       }
       a{
         text-decoration: none !important;
-        color: #D37543
+        color: #fff
       }
       .hero-section {
         position: relative;
@@ -62,14 +62,14 @@
     }
 
     .hero-title {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 800;
         margin-bottom: 1.5rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         opacity: 0.9;
         margin-bottom: 2rem;
         max-width: 600px;
@@ -90,7 +90,7 @@
     }
 
     .btn-custom {
-        padding: 12px 24px;
+        padding: 10px 20px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -98,17 +98,20 @@
     }
 
     .btn-custom.btn-light {
-        background: #D37543;
-        border: none;
-        color: #fff;
-    }
+            background: #DFD3CB;
+            border: none;
+            border-left: 5px solid #371e11;
+            color: #371e11;
+        }
 
-    .btn-custom.btn-light:hover{
-      background: #4A1D3A;
-    }
+        .btn-custom.btn-light:hover {
+          background:#DFD3CB;
+          border-left: 2px solid #371e11;
+          color: #371e11;
+        }
 
     .btn-custom.btn-outline-light {
-        border: 2px solid rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .highlight-text {
@@ -179,7 +182,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: #D37543;
+    background: #452516;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -192,7 +195,7 @@
     flex: 1;
     width: 80px;
     height: 80px;
-    background: #4A1D3A;
+    background: #452516;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -208,8 +211,8 @@
 }
 
   .flip-card:hover .icon-wrapper {
-    background: #D37543;
-    transform: rotate(15deg);
+    background: #452516;
+    transform: rotate(360deg);
   }
 
   .icon-wrapper img {
@@ -233,21 +236,65 @@
   }
 
   .flip-card:hover .icon-font {
-    color: #D37543;
+    color: #452516;
   }
+
+  .btn-primary {
+  background-color: #DFD3CB !important;
+  border: none;
+  border-left: 5px solid #452516 !important;
+  padding: 12px 30px !important;
+  transition: background-color 0.3s ease !important;
+  color: #452516;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #DFD3CB !important;
+  color: #452516;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, #fff, transparent 25%);
+  text-decoration: none;
+}
+
+.sitename{
+  color: #fff !important;
+}
+
+  .video-box {
+        min-height: 400px;
+      }
+
+      .video-box img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        padding: 0px 10px 0px 10px;
+      }
         
     </style>
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center sticky-top header_section">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="/assets/img/logo/e 01.png" alt="">
-        <!-- <h1 class="sitename">Venkatalaxmi Group</h1> -->
+       <img src="/assets/img/logo/e 01.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -275,7 +322,7 @@
               </div>
               <div class="col-lg-5 offset-lg-1">
                   <div class="hero-content">
-                      <h1 class="hero-title" data-aos="fade-left" data-aos-delay="200">Where Hotel is <span class="highlight-text">Home</span></h1>
+                      <h1 class="hero-title" data-aos="fade-left" data-aos-delay="200">Where Hotel is Home</h1>
                       <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="200">Enjoy comfort and luxury at Venkatalaxmi Comforts with warm hospitality and modern amenities.</p>
                       <div class="d-flex gap-3 btn-group">
                           <a href="#about" data-aos="fade-left" data-aos-delay="200"><button class="btn btn-custom btn-light">Get Started</button></a>
@@ -293,7 +340,7 @@
       <div class="container">
 
         <div class="row gy-4">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
+          <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-center position-relative" data-aos="zoom-out" data-aos-delay="100">
             <img src="/assets/img/venkatalaxmi_comforts/about-bg.png" alt="">
           </div>
 
